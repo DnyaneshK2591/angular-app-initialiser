@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppStartupService } from './app-startup.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-app-initialiser';
+  constructor(appStartupService: AppStartupService) {
+    
+  }
 }
