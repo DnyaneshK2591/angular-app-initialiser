@@ -7,7 +7,7 @@ import { AppStartupService } from './app-startup.service';
 import { AppStartup } from './AppStartup';
 
 export function appInitialisation(appStartupService: AppStartupService) {
-  return (): Promise<any> => {
+  return (): Promise<AppStartup> => {
    return appStartupService.init();
   }
 }
