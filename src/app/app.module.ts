@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppStartupService } from './app-startup.service';
 import { AppStartup } from './AppStartup';
+import { Observable } from 'rxjs';
 
 export function appInitialisation(appStartupService: AppStartupService) {
   return (): Promise<AppStartup> => {
-   return appStartupService.init();
-  }
+    return appStartupService.init();
+  };
 }
 
 @NgModule({

@@ -8,17 +8,14 @@ import { AppStartupService } from './app-startup.service';
 })
 export class AppComponent {
   title = 'angular-app-initialiser';
-  appName ="";
-  appVersion ="";
-  appDeveloper ="";
+  appName = '';
+  appVersion = '';
+  appDeveloper = '';
 
   constructor(appStartupService: AppStartupService) {
-    console.log(appStartupService.appStartupObject)
+    console.log(appStartupService.appStartupObject);
     this.appName = appStartupService.appStartupObject.appName;
     this.appVersion = appStartupService.appStartupObject.appVersion;
     this.appDeveloper = appStartupService.appStartupObject.appDeveloper;
-    
   }
-
-
 }
